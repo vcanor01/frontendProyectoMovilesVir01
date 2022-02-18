@@ -1,0 +1,22 @@
+.cuadrado{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #55ACEE;
+    border: solid black;
+    margin: auto;
+    max-width: 324px;
+    min-width: 200px;
+    margin-bottom: 10px;
+    
+}
+p{
+    padding: 0px;
+}
+.hola{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}

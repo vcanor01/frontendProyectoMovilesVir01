@@ -1,0 +1,31 @@
+<div class="contenedor">
+
+
+    <div class="movilMarca">
+      <h3>VER MOVIL CON MARCA SELECCIONADA:</h3>
+        <div>
+          <label for="marcaUno"></label>
+         <input type="text" id="marcaUno" [(ngModel)]="marca">
+         <button routerLink="movilesMarca/{{marca}}">Ver movil</button>
+        </div>
+    </div>
+
+
+    <div class="botonComparar">
+        <div *ngIf="comprobarMarcas()" >
+          <button routerLink="movilesComparador/{{marcasComparar[1]}}/{{marcasComparar[0]}}">Comparar Moviles</button>
+        </div>
+    </div>
+
+
+    <div class="contenedorListaMoviles" *ngIf="myMoviles$ | async as moviles">
+        <div class="cuadrado" *ngFor="let item of moviles.data.moviles" >
+          <p>Marca:{{item.marca}}</p>
+          <p>Modelo:{{item.modelo}}</p>
+          <p>Precio:{{item.precio}} €</p>
+            <button (click)="obtenerItemComparar(item)"> Añadir a comparacion</button>
+            <button (click)="quitarItemComparar(item)"> Quitar de comparacion</button>
+        </div>
+    </div>
+
+</div>

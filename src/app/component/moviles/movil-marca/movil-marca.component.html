@@ -1,0 +1,23 @@
+
+<div class="hola" *ngIf="myMovilesMarca$ | async as moviles">
+   
+    <div class="cuadrado" *ngFor="let item of moviles.data.moviles">
+        <p>{{item.id}}</p>
+        <p>Marca:{{item.marca}}</p>
+        <p>Modelo:{{item.modelo}}</p>
+        <p>Precio:{{item.precio}} €</p>
+        <p>Antutu:{{item.antutu.puntuacion}}</p>
+        <p>Bateria:{{item.bateria.mwh}} mwh</p>
+        <p>Pantalla:{{item.pantalla.size}}''</p>
+        <p>Procesador:{{item.procesador.nombre}}, Nucleos: {{item.procesador.nucleos}}, {{item.procesador.velocidad}} ghz </p>
+        <p>Ram:{{item.ram.gb}} GB</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
